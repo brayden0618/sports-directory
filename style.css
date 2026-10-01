@@ -78,9 +78,12 @@ nav ul li a:hover {
 
 /* Sports Section */
 .sports {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     padding: 20px 40px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Individual Sport Card */
@@ -136,4 +139,60 @@ nav ul li a:hover {
 .sport-link:hover {
     background-color: #D4B66B;
     color: #101D35;
+}
+
+/* Responsive Sports Grid */
+@media (max-width: 900px) {
+    .sports {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .sports {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}
+
+/* Keep Sports Cards Consistent */
+.sport-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sport-card .sport-link {
+    margin-top: auto;
+}
+
+.sport-heading {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.sport-heading h2 {
+    color: #101D35;
+    margin-bottom: 10px;
+}
+
+.sport-heading p {
+    color: #555;
+}
+
+.leagues > h3 {
+    text-align: center;
+    color: #B18C3D;
+    margin-bottom: 20px;
+}
+
+.team-card {
+    justify-content: center;
+    min-height: 150px;
+}
+
+.conference-label {
+    color: #B18C3D;
+    font-weight: bold;
+    margin-top: 10px;
 }
