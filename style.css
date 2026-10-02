@@ -196,3 +196,123 @@ nav ul li a:hover {
     font-weight: bold;
     margin-top: 10px;
 }
+
+/* Player sections */
+.player-section {
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.player-section h2 {
+    color: #101D35;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* Current player cards */
+.current-player-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 240px));
+    justify-content: center;
+    gap: 20px;
+}
+
+.player-card {
+    background-color: #101D35;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.player-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+.player-info {
+    padding: 15px;
+}
+
+.player-position {
+    color: #D4B66B;
+    margin: 8px 0 15px;
+}
+
+/* Player statistics */
+.player-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #526078;
+    padding-top: 12px;
+}
+
+.player-stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-right: 1px solid #526078;
+}
+
+.player-stats div:last-child {
+    border-right: none;
+}
+
+.player-stats span {
+    font-size: 13px;
+    color: #D4B66B;
+}
+
+.player-stats strong {
+    font-size: 18px;
+}
+
+/* Past player cards */
+.past-players-heading {
+    margin-top: 60px;
+}
+
+.past-player-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.past-player-card {
+    background-color: #101D35;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.past-player-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.past-player-info {
+    padding: 12px;
+}
+
+.past-player-info h3 {
+    font-size: 16px;
+}
+
+.past-player-info p {
+    color: #D4B66B;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    .player-section {
+        padding: 20px;
+    }
+}
