@@ -446,6 +446,132 @@ nav ul li a:hover {
     font-size: 14px;
 }
 
+/* Team History */
+
+.team-history {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 40px;
+}
+
+.team-history h2 {
+    color: #101D35;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.history-card {
+    background: #101D35;
+    color: white;
+    padding: 25px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.history-card h3 {
+    color: #D4B66B;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.history-card p {
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Jersey Popup */
+
+.jersey-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.jersey-modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.jersey-modal-content img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    background: white;
+}
+
+.jersey-modal-info {
+    background: #101D35;
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.jersey-modal-info h2 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.jersey-modal-info #jersey-modal-team {
+    color: #D4B66B;
+    margin-bottom: 15px;
+}
+
+.jersey-modal-info #jersey-modal-description {
+    line-height: 1.5;
+}
+
+.jersey-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: #101D35;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.jersey-close:hover {
+    background: #D4B66B;
+    color: #101D35;
+}
+
+.jersey-click {
+    display: inline-block;
+    margin-top: 10px;
+    color: #D4B66B;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.jersey-card {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.jersey-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
 /* Smaller screens */
 @media (max-width: 600px) {
     .player-section {
@@ -462,5 +588,13 @@ nav ul li a:hover {
 
     .jersey-card img {
         height: 250px;
+    }
+
+    .team-history {
+    padding: 0 20px;
+    }
+
+    .history-card {
+    padding: 20px;
     }
 }

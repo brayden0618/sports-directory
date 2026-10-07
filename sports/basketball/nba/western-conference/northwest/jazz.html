@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Utah Jazz | Sports Directory</title>
     <link rel="stylesheet" href="../../../../../style.css">
+    <script src="../../../../../script.js" defer></script>
 </head>
 <body>
 
@@ -430,46 +431,68 @@
 
         <div class="jersey-grid">
 
-            <div class="jersey-card">
+            <div class="jersey-card" onclick="showJersey('Home Jersey')">
                 <img src="../../../../../images/jerseys/jazz-home.jpg"
                     alt="Utah Jazz home jersey">
 
                 <div class="jersey-info">
                     <h3>Home Jersey</h3>
                     <p>Utah Jazz</p>
+                    <span class="jersey-click">Click for details</span>
                 </div>
             </div>
 
-            <div class="jersey-card">
+            <div class="jersey-card" onclick="showJersey('Away Jersey')">
                 <img src="../../../../../images/jerseys/jazz-away.jpg"
                     alt="Utah Jazz away jersey">
 
                 <div class="jersey-info">
                     <h3>Away Jersey</h3>
                     <p>Utah Jazz</p>
+                    <span class="jersey-click">Click for details</span>
                 </div>
             </div>
 
-            <div class="jersey-card">
+            <div class="jersey-card" onclick="showJersey('Statement Jersey')">
                 <img src="../../../../../images/jerseys/jazz-statement.jpg"
                     alt="Utah Jazz statement jersey">
 
                 <div class="jersey-info">
                     <h3>Statement Jersey</h3>
                     <p>Utah Jazz</p>
+                    <span class="jersey-click">Click for details</span>
                 </div>
             </div>
 
-            <div class="jersey-card">
+            <div class="jersey-card" onclick="showJersey('City Edition')">
                 <img src="../../../../../images/jerseys/jazz-city.jpg"
                     alt="Utah Jazz City Edition jersey">
 
                 <div class="jersey-info">
                     <h3>City Edition</h3>
                     <p>Utah Jazz</p>
+                    <span class="jersey-click">Click for details</span>
                 </div>
             </div>
 
+        </div>
+
+        <div id="jersey-modal" class="jersey-modal">
+            <div class="jersey-modal-content">
+
+                <button class="jersey-close" onclick="closeJersey()">
+                    &times;
+                </button>
+
+                <img id="jersey-modal-image" src="" alt="">
+
+                <div class="jersey-modal-info">
+                    <h2 id="jersey-modal-title"></h2>
+                    <p id="jersey-modal-team">Utah Jazz</p>
+                    <p id="jersey-modal-description"></p>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -819,6 +842,53 @@
 
     </div>
 
+    </section>
+
+    <section class="team-history">
+    <h2>Team History</h2>
+
+    <div class="history-card">
+        <h3>The Beginning</h3>
+        <p>
+            The franchise began as the New Orleans Jazz in 1974. The team
+            moved to Utah in 1979 and became the Utah Jazz.
+        </p>
+    </div>
+
+    <div class="history-card">
+        <h3>The Stockton and Malone Era</h3>
+        <p>
+            John Stockton and Karl Malone became the centerpiece of the Jazz
+            during the 1980s and 1990s. Together, they led Utah to multiple
+            deep playoff runs and two NBA Finals appearances.
+        </p>
+    </div>
+
+    <div class="history-card">
+        <h3>A New Generation</h3>
+        <p>
+            After the Stockton and Malone era, players such as Deron Williams,
+            Carlos Boozer, and Andrei Kirilenko helped lead the Jazz into a
+            new era.
+        </p>
+    </div>
+
+    <div class="history-card">
+        <h3>The Mitchell and Gobert Era</h3>
+        <p>
+            Donovan Mitchell and Rudy Gobert became the leaders of the Jazz
+            during the late 2010s and early 2020s, helping Utah become a
+            consistent playoff team.
+        </p>
+    </div>
+
+    <div class="history-card">
+        <h3>The Future</h3>
+        <p>
+            The Jazz are continuing to build for the future with a younger
+            roster and a new generation of players.
+        </p>
+    </div>
     </section>
     </main>
 
