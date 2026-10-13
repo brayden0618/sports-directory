@@ -191,6 +191,22 @@ nav ul li a:hover {
     min-height: 150px;
 }
 
+.team-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.team-card {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
 .conference-label {
     color: #B18C3D;
     font-weight: bold;
