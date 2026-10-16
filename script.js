@@ -1,48 +1,116 @@
-function showJersey(jerseyName) {
+// ========================================
+// UTAH JAZZ JERSEYS
+// ========================================
+
+function showJazzJersey(jerseyName) {
+    const jerseys = {
+        "Home Jersey": {
+            image: "../../../../../images/jerseys/jazz-home.jpg",
+            description: "The Utah Jazz home jersey represents the team's home uniform."
+        },
+        "Away Jersey": {
+            image: "../../../../../images/jerseys/jazz-away.jpg",
+            description: "The Utah Jazz away jersey represents the team on the road."
+        },
+        "Statement Jersey": {
+            image: "../../../../../images/jerseys/jazz-statement.jpg",
+            description: "The Statement Edition gives the Jazz a distinctive alternate look."
+        },
+        "City Edition": {
+            image: "../../../../../images/jerseys/jazz-city.jpg",
+            description: "The City Edition jersey highlights Utah and the identity of the Jazz."
+        }
+    };
+
+    openJerseyModal(jerseyName, "Utah Jazz", jerseys);
+}
+
+
+// ========================================
+// DENVER NUGGETS JERSEYS
+// ========================================
+
+function showNuggetsJersey(jerseyName) {
+    const jerseys = {
+        "Home Jersey": {
+            image: "../../../../../images/jerseys/nuggets-home.jpg",
+            description: "The Nuggets' white Association Edition jersey features the team's colors and branding."
+        },
+        "Away Jersey": {
+            image: "../../../../../images/jerseys/nuggets-away.jpg",
+            description: "The Nuggets' navy Icon Edition jersey represents the team's core identity."
+        },
+        "Statement Jersey": {
+            image: "../../../../../images/jerseys/nuggets-statement.jpg",
+            description: "The Statement Edition provides a bold alternate look for the Denver Nuggets."
+        }
+    };
+
+    openJerseyModal(jerseyName, "Denver Nuggets", jerseys);
+}
+
+
+// ========================================
+// SHARED JERSEY POP-UP
+// ========================================
+
+function openJerseyModal(jerseyName, teamName, jerseys) {
     const modal = document.getElementById("jersey-modal");
     const image = document.getElementById("jersey-modal-image");
     const title = document.getElementById("jersey-modal-title");
     const team = document.getElementById("jersey-modal-team");
     const description = document.getElementById("jersey-modal-description");
 
-    const jerseys = {
-        "Home Jersey": {
-            image: "../../../../../images/jerseys/jazz-home.jpg",
-            description: "The Utah Jazz home jersey represents the team's classic home look."
-        },
+    // Stop if any of the modal elements are not found.
+    if (!modal || !image || !title || !team || !description) {
+        console.error("Jersey modal elements could not be found.");
+        return;
+    }
 
-        "Away Jersey": {
-            image: "../../../../../images/jerseys/jazz-away.jpg",
-            description: "The Utah Jazz away jersey represents the team on the road."
-        },
+    const jersey = jerseys[jerseyName];
 
-        "Statement Jersey": {
-            image: "../../../../../images/jerseys/jazz-statement.jpg",
-            description: "The Statement Edition jersey gives the Jazz a bold alternate look."
-        },
+    // Stop if the requested jersey does not exist.
+    if (!jersey) {
+        console.error("Jersey not found:", jerseyName);
+        return;
+    }
 
-        "City Edition": {
-            image: "../../../../../images/jerseys/jazz-city.jpg",
-            description: "The City Edition jersey represents Utah and the identity of the Jazz."
-        }
-    };
-
-    image.src = jerseys[jerseyName].image;
-    image.alt = jerseyName;
-
+    image.src = jersey.image;
+    image.alt = teamName + " " + jerseyName;
     title.textContent = jerseyName;
-    team.textContent = "Utah Jazz";
-    description.textContent = jerseys[jerseyName].description;
+    team.textContent = teamName;
+    description.textContent = jersey.description;
 
     modal.style.display = "flex";
 }
 
+
+// ========================================
+// CLOSE THE JERSEY POP-UP
+// ========================================
+
 function closeJersey() {
-    document.getElementById("jersey-modal").style.display = "none";
+    const modal = document.getElementById("jersey-modal");
+
+    if (modal) {
+        modal.style.display = "none";
+    }
 }
 
-document.getElementById("jersey-modal").addEventListener("click", function(event) {
-    if (event.target === this) {
+
+// Close the pop-up when clicking outside its content.
+document.addEventListener("click", function(event) {
+    const modal = document.getElementById("jersey-modal");
+
+    if (modal && event.target === modal) {
+        closeJersey();
+    }
+});
+
+
+// Close the pop-up when pressing Escape.
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
         closeJersey();
     }
 });

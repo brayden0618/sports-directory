@@ -588,6 +588,89 @@ nav ul li a:hover {
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
+
+/* ========================================
+   SEASON STATISTICS
+========================================= */
+
+.season-stats {
+    margin: 40px 0;
+}
+
+.season-stats h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.season-stats-intro {
+    text-align: center;
+    margin: 0 auto 25px;
+    max-width: 650px;
+    line-height: 1.6;
+}
+
+.season-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.season-card {
+    background: #101D35;
+    color: white;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #D4B66B;
+    box-sizing: border-box;
+}
+
+.season-card h3 {
+    color: #D4B66B;
+    font-size: 1.4rem;
+    margin: 0 0 18px;
+    text-align: center;
+}
+
+.season-record,
+.season-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.season-record strong {
+    font-size: 1.2rem;
+    color: #D4B66B;
+}
+
+.season-detail strong {
+    text-align: right;
+}
+
+.season-highlight {
+    margin: 16px 0 0;
+    line-height: 1.5;
+}
+
+.championship-season {
+    border: 2px solid #D4B66B;
+}
+
+.championship-season h3::after {
+    content: " ★";
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 650px) {
+    .season-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 /* Smaller screens */
 @media (max-width: 600px) {
     .player-section {
