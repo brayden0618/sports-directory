@@ -17,13 +17,21 @@ header {
     padding: 20px 40px;
 }
 
-nav {
+/* Navigation Links */
+nav ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    list-style: none;
+    gap: 30px;
 }
 
-/* Hamburger Menu */
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+/* Hamburger Button */
 .menu-toggle {
     display: none;
     background: none;
@@ -39,8 +47,52 @@ nav {
     background-color: #D4B66B;
     margin: 6px 0;
     border-radius: 3px;
-    transition: 0.3s ease;
 }
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav h1 {
+        font-size: 24px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        padding-top: 10px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 14px;
+        border-top: 1px solid #526078;
+    }
+}
+
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
